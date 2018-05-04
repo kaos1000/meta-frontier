@@ -6,13 +6,21 @@
     <a-scene altspace="fullspace:true" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
       <a-assets>
         <img id="uv" src="uv.jpg">
+        <img id="tree_cone_mtl" src="tree_cone.png">  
+        <img id="tree_cone_mtl_01" src="tree_cone_light_purple.png">  
+        <img id="tree_cone_mtl_02" src="tree_cone_imperial.png">              
       </a-assets>
       <a-entity obj-model="mtl:mountains.mtl;obj:mountains.obj" id="mountains"></a-entity>  
+<a-entity id="pine_tree">
       <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" id="stump"></a-entity> 
-      <a-entity position="-0.3 40.01 0" scale="4.736 64.764 8.074" geometry="primitive:cone" id="tree_cone" material="src:#uv;"></a-entity>
+      <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:#tree_cone_mtl;"></a-entity>
+      <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:#tree_cone_mtl_01;"></a-entity>
+      <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="transparent:true;src:#tree_cone_mtl_02;opacity:.5"></a-entity>
+</a-entity>
         <!--ground/sky-->
         <a-sky color="#ACECF7" radius="2500"></a-sky>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#FFDAB9"></a-plane>   
+        <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
     </a-scene>
 <!--
   https://coolors.co/ffdab9-dac4f7-49306b-f4989c-acecf7  
