@@ -12,14 +12,30 @@
         <a-asset-item id="pine_tree_gltf" src="pine_tree.gltf"></a-asset-item>             
       </a-assets>
       <a-entity obj-model="mtl:mountains.mtl;obj:mountains.obj" id="mountains"></a-entity>  
-      <a-entity id="pine_tree">
-          <a-entity gltf-model="pine_tree.gltf" position="6.392 0 0"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
-      </a-entity>
-        <!--ground/sky-->
-        <a-sky color="#ACECF7" radius="2500"></a-sky>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#FFDAB9"></a-plane>   
-        <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
-    </a-scene>
+
+      <a-entity id="trees">
+          <a-entity id="pine_tree">
+              <a-entity gltf-model="pine_tree.gltf" position="6.392 0 0"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
+          </a-entity><a-entity id="pine_tree-4" position="-13.392 0 47.226">
+              <a-entity gltf-model="pine_tree.gltf" position="6.392 0 0"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
+          </a-entity><a-entity id="pine_tree-5" position="-34.777 0 15.443">
+              <a-entity gltf-model="pine_tree.gltf" position="6.392 0 0"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
+          </a-entity>
+          <a-entity id="pine_tree-2" position="-96.184 0 4.122" rotation="0 30.309467362420552 0">
+              <a-entity gltf-model="pine_tree.gltf" position="6.392 0 0" scale="1 0.19299999999999995 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1.63"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
+          </a-entity><a-entity id="pine_tree-3" position="-14.447 0 12.682" rotation="0 30.309467362420552 0">
+              <a-entity gltf-model="pine_tree.gltf" position="1.462 0 -14.194" scale="1 0.19299999999999995 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1.63"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
+          </a-entity>
+            <!--ground/sky-->
+            <a-sky color="#ACECF7" radius="2500"></a-sky>
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#FFDAB9"></a-plane>   
+            
+       </a-entity>
+
+
+
+
+      </a-scene>
 <!--
   https://coolors.co/ffdab9-dac4f7-49306b-f4989c-acecf7  
   #FFDAB9 - PEACH PUFF - 255,218,185
