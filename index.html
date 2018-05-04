@@ -12,12 +12,9 @@
         <a-asset-item id="pine_tree_gltf" src="pine_tree.gltf"></a-asset-item>             
       </a-assets>
       <a-entity obj-model="mtl:mountains.mtl;obj:mountains.obj" id="mountains"></a-entity>  
-<a-entity id="pine_tree">
-    <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" id="stump"></a-entity> 
-    <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:#tree_cone_mtl;"></a-entity>
-    <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:#tree_cone_mtl_01;"></a-entity>
-    <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="transparent:true;src:#tree_cone_mtl_02;opacity:.5"></a-entity>
-</a-entity>
+      <a-entity id="pine_tree">
+          <a-entity gltf-model="pine_tree.gltf" position="6.392 0 0"></a-entity><a-entity gltf-model="pine_tree.gltf" position="8.89 0 11.535" scale="1 0.359 1"></a-entity><a-entity gltf-model="pine_tree.gltf" position="24.135 0 11.535" scale="1.261 0.359 1"></a-entity>
+      </a-entity>
         <!--ground/sky-->
         <a-sky color="#ACECF7" radius="2500"></a-sky>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#FFDAB9"></a-plane>   
