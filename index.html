@@ -27,12 +27,30 @@
       <a-entity id="thing1">
           <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="87.706 -1.174 264.386" scale="23.883 0.285 33.993" id="starter-6"></a-entity><a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -1.174 298.295" scale="23.883 0.285 33.993" id="starter-7"></a-entity><a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -1.527 338.68" scale="23.883 2.349 33.993" id="starter-8" rotation="0 0 -5.901465289847479"></a-entity><a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -5.844 380.051" scale="23.883 3.129 33.993" id="starter-9" rotation="0 0 6.990085100596043"></a-entity><a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -1.527 423.105" scale="68.086 3.649 33.993" id="starter-10"></a-entity>
       </a-entity>
-      <a-entity id="bushes" position="0 -0.904 0">
+      <a-entity id="bushes" position="32.385 -0.904 59.372">
           <a-entity id="bush" position="0 4.829 0">
-              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush.png" rotation="0 90 0"></a-entity>
-              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush.png"></a-entity>
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
               </a-entity>
-              
+              <a-entity id="bush2" position="3.789 4.829 0">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity>          
+
+      </a-entity>
+      <a-entity id="bushes-2" position="15.616 -0.904 -43.568">
+          <a-entity id="bush" position="0 4.829 0">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity>
+              <a-entity id="bush2" position="0 4.829 0">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity>          
 
       </a-entity>
       <!--
@@ -214,7 +232,7 @@
             <!--ground/sky-->
 
         <a-sky color="#ACECF7" radius="2500"></a-sky>
-            <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" material="color:#FFDAB9;src:#floor;repeat:4000 4000"></a-plane>   
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" material="color:#FFDAB9;src:#floor;repeat:4000 4000" altspace-cursor-collider='enabled: false'></a-plane>   
       </a-scene>
 <!--
   https://coolors.co/ffdab9-dac4f7-49306b-f4989c-acecf7  
