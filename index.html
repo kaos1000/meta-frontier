@@ -6,6 +6,7 @@
     <a-scene altspace="fullspace:true" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
       <a-assets>
         <img id="uv" src="uv.jpg">
+        <img id="sky" src="sky.jpg">
         <img id="floor" src="floor.png">
         <img id="tree_cone_mtl" src="tree_cone.png">  
         <img id="tree_cone_mtl_01" src="tree_cone_light_purple.png">  
@@ -534,7 +535,7 @@
 <!--end trees 2-->
             <!--ground/sky-->
 
-        <a-sky color="#ACECF7" radius="2500"></a-sky>
+        <a-sky src="#sky" radius="2500"></a-sky>
             <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" material="color:#FFDAB9;src:#floor;repeat:4000 4000" altspace-cursor-collider='enabled: false'></a-plane>   
       </a-scene>
 <!--
