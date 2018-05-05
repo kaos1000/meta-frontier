@@ -36,11 +36,11 @@
                          <a-dodecahedron color="#DDCA7D" radius="5" position="1.672 1.037 -5.33" scale="0.08 2.05 0.215" material="src:#btn"></a-dodecahedron><a-dodecahedron color="#DDCA7D" radius="5" position="0.239 1.037 -5.33" scale="0.08 2.05 0.215" material="src:#btn"></a-dodecahedron>
                          <a-octahedron color="#DDCA7D" radius="5" position="-1.449 1.485 -5.636" scale="0.286 1.768 0.095" material="src:#btn" rotation="0 -123.07133439410083 0"></a-octahedron>
                           
-                          <a-box position="1.016 0.361 -3.774" color="#DDCA7D" material="src:#btn" scale="3.245 0.079 1.36"></a-box><a-box altspace-cursor-collider="enabled: false" position="1.257 -0.027 -2.26" color="#DDCA7D" material="src:#btn" scale="3.776 0.079 4.784"></a-box>
+                          <a-box position="1.016 0.361 -3.774" color="#DDCA7D" material="src:#btn" scale="3.245 0.079 1.36" n-box-collider="type: environment;"></a-box><a-box n-box-collider="type: environment;" position="1.257 -0.027 -2.26" color="#DDCA7D" material="src:#btn" scale="3.776 0.079 4.784"></a-box>
                    </a-entity>
         <!--ground/sky-->
         <a-sky color="#C57CEA" radius="2500"></a-sky>
-        <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#533E2D"></a-plane>    
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#533E2D" altspace-cursor-collider="enabled: false"></a-plane>    
     </a-scene>
 <!--
  https://coolors.co/533e2d-a27035-b88b4a-ddca7d-c57cea
