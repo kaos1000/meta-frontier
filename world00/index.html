@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+  </head>
+  <body class="a-body ">
+    <a-scene altspace="fullspace:true" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+        <a-assets>
+            <img id="btn" src="btn1.png">
+        </a-assets>
+                      <a-entity id="color"> 
+                        <a-box position="-23.427 1.303 -13.876" color="#DDCA7D" material="src:#btn"></a-box>
+                        <a-sphere position="-19.564 1.25 -13.528" radius="1.25" color="#DDCA7D" material="src:#btn"></a-sphere>
+                        <a-cylinder position="-16.517 0.75 -13.881" radius="0.5" height="1.5" color="#DDCA7D" material="src:#btn"></a-cylinder>
+                        <a-cone color="#DDCA7D" radius-bottom="1" radius-top="0" position="-12.662 1.206 -13.875" material="src:#btn"></a-cone>
+                        
+                        <a-dodecahedron color="#DDCA7D" radius="5" position="-8.347 1.283 -32.808" scale="0.215 0.215 0.215" material="src:#btn"></a-dodecahedron>
+                        <a-icosahedron color="#DDCA7D" radius="5" position="-4.585 1.547 -31.056" scale="0.179 0.179 0.179" material="src:#btn"></a-icosahedron>
+                          <a-octahedron color="#DDCA7D" radius="5" position="-1.449 1.485 -14.571" scale="0.286 0.286 0.286" material="src:#btn" geometry=""></a-octahedron>
+                       
+                        <a-ring material="side:double;color:#DDCA7D" radius-inner="1" radius-outer="2" position="3.415 2.548 -14.339"></a-ring>
+                        <a-tetrahedron color="#DDCA7D" radius="5" position="8.009 2.72 -14.719" scale="0.319 0.319 0.319" material="src:#btn" geometry=""></a-tetrahedron>
+                      
+                        <a-torus-knot color="#DDCA7D" arc="180" p="2" q="7" radius="5" radius-tubular="1" position="11.128 2.169 -14.916" scale="0.143 0.143 0.143" material="src:#btn"></a-torus-knot>
+                        <a-torus color="#DDCA7D" arc="360" radius="5" radius-tubular="1" position="14.3 2.099 -14.99" scale="0.25 0.25 0.25" material="src:#btn"></a-torus>
+                        <a-triangle material="side:double;color:#DDCA7D" vertex-c="1 -1 0" position="16.735 2.67 -13.413"></a-triangle>
+                 </a-entity>  
+                 <a-entity id="canyon" position="0 0 -517.451" scale="216.93 216.93 216.93">
+                        <a-dodecahedron color="#DDCA7D" radius="5" position="-5.009 1.037 -3.247" scale="0.215 0.215 0.215" material="src:#btn"></a-dodecahedron>
+                       <a-octahedron color="#DDCA7D" radius="5" position="-0.26 1.485 -2.08" scale="0.286 0.286 0.286" material="src:#btn"></a-octahedron>
+                        <a-tetrahedron color="#DDCA7D" radius="5" position="4.513 1.714 1.368" scale="0.319 0.319 0.319" material="src:#btn"></a-tetrahedron>
+                        <a-box position="1.831 1.303 -4.429" color="#DDCA7D" material="src:#btn"></a-box>
+                        <a-dodecahedron color="#DDCA7D" radius="5" position="-3.396 1.037 -3.247" scale="0.215 0.215 0.215" material="src:#btn"></a-dodecahedron>
+                        <a-octahedron color="#DDCA7D" radius="5" position="0.376 1.485 -2.08" scale="0.286 0.286 0.286" material="src:#btn"></a-octahedron>
+                         <a-tetrahedron color="#DDCA7D" radius="5" position="5.25 1.313 1.368" scale="0.319 0.319 0.319" material="src:#btn"></a-tetrahedron>
+                         <a-box position="-0.429 1.303 -4.429" color="#DDCA7D" material="src:#btn"></a-box>
+                         <a-dodecahedron color="#DDCA7D" radius="5" position="-6.568 1.037 -3.247" scale="0.215 0.215 0.215" material="src:#btn"></a-dodecahedron>
+                         <a-octahedron color="#DDCA7D" radius="5" position="-1.449 1.485 -2.08" scale="0.286 0.286 0.286" material="src:#btn"></a-octahedron>
+                          <a-tetrahedron color="#DDCA7D" radius="5" position="3.241 1.714 1.368" scale="0.319 0.319 0.319" material="src:#btn"></a-tetrahedron>
+                          <a-box position="-2.851 1.303 -4.429" color="#DDCA7D" material="src:#btn"></a-box>
+                   </a-entity>
+        <!--ground/sky-->
+        <a-sky color="#C57CEA" radius="2500"></a-sky>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#533E2D"></a-plane>    
+    </a-scene>
+<!--
+ https://coolors.co/533e2d-a27035-b88b4a-ddca7d-c57cea
+ #533E2D - DARK LIVER (HORSES)
+ #A27035 - METALLIC SUNBURST
+ #B88B4A - Deer
+ #DDCA7D - BURLYWOOD
+ #C57CEA - Lavender
+-->
+</body></html>
