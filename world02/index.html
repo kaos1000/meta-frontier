@@ -15,23 +15,33 @@
         <img id='btn' src='btn1.png'/>
         <img id='hull' src='hull.jpg'/>      
         <img id='grate' src='grate.png'/>  
+        <img id='trovia' src='planet_trovia.jpg'/>  
     </a-assets>
 
-    <a-sphere position="11.796 -180.712 -2.94" material="src:#moon;" rotation="279.255 24.894 0" id="moon" scale="71.823 71.823 71.823">
+    <a-sphere position="11.796 -180.712 -2.94" material="src:#trovia;" rotation="279.255 24.894 0" id="moon" scale="71.823 71.823 71.823">
         <!-- add an animation to make it rotate -->
         <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
     </a-animation></a-sphere>
 
     <!-- add the backdrop of stars -->
-    <a-sky src='#stars' radius='2500'>
+    <a-sky src='#stars' radius='2500' id="the_sky">
 
-            <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
+            <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite" begin="right" end="right_stop">
     </a-sky>
 
         <!--ground/sky-->
         <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
         <a-entity position="0 -0.083 0" geometry="width:37" id="floor" material="repeat:37 .4;transparent:true;color:#E0E0CE;src:#grate;" scale="1 0.153 1"></a-entity>
         <a-sphere material="repeat:4 4;side:double;transparent:true;src:#grate;" id="dome" scale="46.042 16.929 46.042" position="0 30.979 0"></a-sphere>
+<!--begin control panel-->
+<a-entity id="cp_position">
+        <a-entity position="4.106 0.892 1.755" geometry="" material="color:#474747;src:#btn" id="panel"></a-entity>
+        <a-entity position="3.907 0.892 1.222" geometry="" material="color:#474747;src:#btn" scale="0.15 0.15 0.15" id="btn2"></a-entity>
+        <a-entity position="4.28 0.892 1.222" geometry="" material="color:#474747;src:#btn" scale="0.15 0.15 0.15" id="btn1"></a-entity>
+</a-entity>
+
+<!--end control panel-->
+
         <!--begin station sub structure-->
         <a-entity id="sub_structure" position="0 18.748 0"> 
 
@@ -45,6 +55,28 @@
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#E0E0CE"></a-plane>    
 -->
     </a-scene>
+
+    <script>
+            //grab aframe scene 
+          var sceneEl = document.querySelector('a-scene');
+            //grab buttons (in this scene there are 4)
+            var btn1 = sceneEl.querySelector('#btn1');
+            var btn2 = sceneEl.querySelector('#btn2');
+
+      //grab actual elevator "floor" element id #lift
+            var the_sky = sceneEl.querySelector('#the_sky');
+      
+            btn1.addEventListener('click', function (event) {
+              
+              the_sky.emit('right', 'text', true);
+            });
+            btn2.addEventListener('click', function (event) {
+             
+                the_sky.emit('right_stop', 'text', true);
+            });
+
+      
+          </script>
 <!--
 https://coolors.co/474747-f2af29-C2576E-e0e0ce-ac1838
 -->
