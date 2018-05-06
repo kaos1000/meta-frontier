@@ -28,11 +28,11 @@
         <!--ground/sky-->
         <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
         <a-entity position="0 -0.083 0" geometry="width:37" id="floor" material="repeat:37 .4;transparent:true;color:#E0E0CE;src:#grate;" scale="1 0.153 1"></a-entity>
-
+        <a-sphere material="repeat:4 4;side:double;transparent:true;src:#grate;" id="dome" scale="46.042 16.929 46.042" position="0 30.979 0"></a-sphere>
         <!--begin station sub structure-->
-        <a-entity id="sub_structure"> 
-                <a-sphere material="repeat:4 4;src:#grate;transparent:true;side:double;" id="dome" scale="20.354 20.354 20.354"></a-sphere>
-                <a-cylinder id="grey_pole" radius="0.5" height="1.5" material="color:#474747;src:#btn" position="0 -13.882 0" scale="1 18.448 1" geometry=""></a-cylinder>
+        <a-entity id="sub_structure" position="0 18.748 0"> 
+
+                <a-cylinder id="grey_pole" radius="0.5" height="1.5" material="color:#474747;src:#btn" position="0 -13.882 0" scale="1 18.448 1"></a-cylinder>
                 <a-cylinder id="yellow_pole" radius="0.5" height="1.5" material="color:#F2AF29;src:#btn" position="8.887 -13.882 0" scale="1 18.448 1"></a-cylinder>
                 <a-cylinder id="bone_pole" radius="0.5" height="1.5" material="color:#E0E0CE;src:#btn" position="-9.539 -13.882 0" scale="1 18.448 1"></a-cylinder>
                 <a-cylinder id="red_pole" radius="0.5" height="1.5" material="color:#AC1838;src:#btn" position="17.696 -13.882 0" scale="1 18.448 1"></a-cylinder>
