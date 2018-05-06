@@ -14,6 +14,7 @@
         <img id='stars' src='stars.png'/>
         <img id='btn' src='btn1.png'/>
         <img id='hull' src='hull.jpg'/>      
+        <img id='grate' src='grate.png'/>  
     </a-assets>
 
     <a-sphere position="11.796 -180.712 -2.94" material="src:#moon;" rotation="279.255 24.894 0" id="moon" scale="71.823 71.823 71.823">
@@ -26,7 +27,7 @@
 
         <!--ground/sky-->
         <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
-        <a-entity position="0 -0.558 0"  geometry="primitive: box; width: 37; height: 1; depth: 1" id="floor" material="color:#E0E0CE;src:#hull;repeat: 37 1;"></a-entity> 
+        <a-entity position="0 -0.083 0" geometry="width:37" id="floor" material="repeat:37 .4;transparent:true;color:#E0E0CE;src:#grate;" scale="1 0.153 1"></a-entity>
         <!--
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#E0E0CE"></a-plane>    
 -->
