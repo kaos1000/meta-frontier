@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+</head>
+<body>
+<!-- set up the scene -->
+<a-scene altspace='fullspace:true;'>
+
+    <!-- preload all our textures -->
+    <a-assets>
+        <img id='moon' src='moon.jpg'/>
+        <img id='stars' src='stars.png'/>
+        <img id='btn' src='btn1.png'/>
+        <img id='hull' src='hull.jpg'/>      
+    </a-assets>
+
+    <!-- add the moon to the scene -->
+    <a-sphere position="11.796 -46.357 -2.94" material="src:#moon" rotation="300 0 0" id="moon" scale="41.957 41.957 41.957">
+        <!-- add an animation to make it rotate -->
+        <a-animation to="0 360 0" easing="linear" dur="2000000" repeat="indefinite">
+    </a-animation></a-sphere>
+
+    <!-- add the backdrop of stars -->
+    <a-sky src='#stars' radius='2500'></a-sky>
+
+        <!--ground/sky-->
+        <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+        <a-entity position="0 -0.558 0"  geometry="primitive: box; width: 37; height: 1; depth: 1" id="floor" material="color:#E0E0CE;src:#hull;repeat: 37 1;"></a-entity> 
+        <!--
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#E0E0CE"></a-plane>    
+-->
+    </a-scene>
+<!--
+https://coolors.co/474747-f2af29-000000-e0e0ce-ac1838
+-->
+</body></html>
