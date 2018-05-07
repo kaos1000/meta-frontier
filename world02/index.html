@@ -21,12 +21,14 @@
     <a-sphere position="11.796 -180.712 -2.94" material="src:#trovia;" rotation="279.255 24.894 0" id="moon" scale="71.823 71.823 71.823">
         <!-- add an animation to make it rotate -->
         <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
-    </a-animation></a-sphere>
+    </a-animation>
+    <a-animation attribute="scale" from="1 1 1" to="71.823 71.823 71.823" dur="200000"></a-animation>
+</a-sphere>
 
     <!-- add the backdrop of stars -->
-    <a-sky src='#stars' radius='2500' id="the_sky">
+    <a-sky src='#stars' radius='2500' id="the_sky" position="" rotation="" scale="">
 
-            <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite" begin="right" end="right_stop">
+            <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite" begin="right" end="right_stop" id="star_anim">
     </a-sky>
 
         <!--ground/sky-->
@@ -65,14 +67,20 @@
 
       //grab actual elevator "floor" element id #lift
             var the_sky = sceneEl.querySelector('#the_sky');
-      
-            btn1.addEventListener('click', function (event) {
-              
+            var star_anim;
+                   console.log(the_sky.getAttribute('rotation'));       
+            btn1.addEventListener('mousedown', function (event) {
+
               the_sky.emit('right', 'text', true);
             });
-            btn2.addEventListener('click', function (event) {
-             
+            btn1.addEventListener('mouseup', function (event) {
+               
                 the_sky.emit('right_stop', 'text', true);
+                star_anim =  sceneEl.querySelector('#star_anim');
+                console.log(the_sky.object3D.rotation);
+                star_anim.setAttribute('from', the_sky.getAttribute('position'));
+               // the_sky.object3D.rotation.y = sky_new_pos.object3D.rotation.y;
+                //the_sky.position = sky_new_pos.position;
             });
 
       
