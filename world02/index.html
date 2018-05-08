@@ -18,23 +18,23 @@
         <img id='trovia' src='planet_trovia.jpg'/>  
     </a-assets>
 
-    <a-sphere position="-296.251 -70.501 -164.22" material="src:#trovia;" rotation="274.614 30.464 0" id="moon" scale="1.001 1.001 1.001">
+    <a-sphere position="-296.251 -70.501 -164.22" material="src:#trovia;" rotation="274.614 30.464 0" id="moon1" scale="1.001 1.001 1.001">
    
         <!-- add an animation to make it rotate -->
         <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
     </a-animation>
-    <a-animation attribute="scale"  to="251.823 251.823 251.823" dur="200000" begin="tovia"></a-animation>
-    <a-animation attribute="scale" from="251.823 251.823 251.823" to=".1 .1 .1" dur="200000" delay="205000" begin="tovia"></a-animation>
-    <a-animation attribute="position" from="" to="297.541 70.501 -636.042" dur="200000" delay="205000" begin="tovia"></a-animation>
+    <a-animation attribute="scale"  to="251.823 251.823 251.823" dur="200000" begin="trovia"></a-animation>
+    <a-animation attribute="scale" from="251.823 251.823 251.823" to=".1 .1 .1" dur="200000" delay="205000" begin="trovia"></a-animation>
+    <a-animation attribute="position" from="" to="297.541 70.501 -636.042" dur="200000" delay="205000" begin="trovia"></a-animation>
 
 </a-sphere>
 <a-sphere position="-296.251 -70.501 -164.22" material="emissive:#FF0000;opacity:.3;" rotation="274.614 30.464 0" id="moon2" scale="2 2 2">
           <!-- add an animation to make it rotate -->
           <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
             </a-animation>
-            <a-animation attribute="scale"  to="261.823 261.823 261.823" dur="200000" begin="tovia"></a-animation>
-            <a-animation attribute="scale" from="261.823 261.823 261.823" to="2 2 2" dur="200000" delay="205000" begin="tovia"></a-animation>
-            <a-animation attribute="position" from="" to="297.541 70.501 -636.042" dur="200000" delay="205000" begin="tovia"></a-animation>
+            <a-animation attribute="scale"  to="261.823 261.823 261.823" dur="200000" begin="trovia"></a-animation>
+            <a-animation attribute="scale" from="261.823 261.823 261.823" to="2 2 2" dur="200000" delay="205000" begin="trovia"></a-animation>
+            <a-animation attribute="position" from="" to="297.541 70.501 -636.042" dur="200000" delay="205000" begin="trovia"></a-animation>
     </a-sphere>
     <!-- add the backdrop of stars -->
     <a-sky src='#stars' radius='2500' id="the_sky" position="" rotation="" scale="">
@@ -75,16 +75,16 @@
           var sceneEl = document.querySelector('a-scene');
             //grab buttons (in this scene there are 4)
             var btn1 = sceneEl.querySelector('#btn1');
-           // var btn2 = sceneEl.querySelector('#btn2');
+           //var btn2 = sceneEl.querySelector('#btn2');
 
       //grab actual elevator "floor" element id #lift
-           var moon = sceneEl.querySelector('#moon');
+           var moon1 = sceneEl.querySelector('#moon1');
            var moon2 = sceneEl.querySelector('#moon2');
             var star_anim;
-                   //console.log(the_sky.getAttribute('rotation'));       
+                   //console.log(moon);       
             btn1.addEventListener('mousedown', function (event) {
 
-              moon.emit('trovia', 'text', true);
+              moon1.emit('trovia', 'text', true);
               moon2.emit('trovia', 'text', true);
             });
             btn1.addEventListener('mouseup', function (event) {
