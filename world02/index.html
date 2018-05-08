@@ -23,12 +23,14 @@
         <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
     </a-animation>
     <a-animation attribute="scale" from="1 1 1" to="251.823 251.823 251.823" dur="200000"></a-animation>
+    <a-animation attribute="scale" from="251.823 251.823 251.823" to=".1 .1 .1" dur="200000" delay="205000"></a-animation>
+    <a-animation attribute="position" from="" to="296.251 70.501 164.22" dur="200000" delay="205000"></a-animation>
 </a-sphere>
 
     <!-- add the backdrop of stars -->
     <a-sky src='#stars' radius='2500' id="the_sky" position="" rotation="" scale="">
 
-            <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite" delay="200000" id="star_anim">
+            <a-animation to="0 360 0" easing="linear" dur="5000" repeat="1" delay="200000" id="star_anim">
     </a-sky>
 
         <!--ground/sky-->
